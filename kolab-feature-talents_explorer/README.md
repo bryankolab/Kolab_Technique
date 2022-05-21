@@ -14,7 +14,7 @@ Une fois le projet installer, c'est à toi de coder.
 
 ## Exercices à réaliser 
 
-![alt text](\Capture d’écran 2022-05-17 à 12.19.16.png)
+![alt text](https:///Users/paume/Desktop/Kolab_Technique/kolab-feature-talents_explorer/Kolab.png)
 
 
 Dans un premier temps, créer deux utilisateurs sur kolab 
