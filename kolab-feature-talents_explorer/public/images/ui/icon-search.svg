@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>search</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="-35.3618862%" x2="21.1707826%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#4F00B5" offset="0%"></stop>
+            <stop stop-color="#7D2A86" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="***********Symbols***********" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="search/bar/talent" transform="translate(-34.000000, -44.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero" stroke="url(#linearGradient-1)" stroke-width="2">
+            <g id="SEARCH-BAR">
+                <g transform="translate(35.000000, 35.000000)">
+                    <g id="search" transform="translate(0.000000, 10.000000)">
+                        <path d="M29.6334049,27.86625 L21.1022486,19.335 C22.75475,17.2937695 23.7497195,14.7 23.7497195,11.8750195 C23.7497195,5.32751953 18.4222585,0 11.8748305,0 C5.32740241,0 0,5.32746094 0,11.8749609 C0,18.4224609 5.327461,23.7499805 11.8748891,23.7499805 C14.6998385,23.7499805 17.2935795,22.755 19.3347876,21.1024805 L27.8659439,29.6337305 C28.1096912,29.8774805 28.4296681,30 28.7497037,30 C29.0697392,30 29.3897162,29.8774805 29.6334635,29.6337305 C30.1221886,29.145 30.1221886,28.3549805 29.6334049,27.86625 Z M11.8604651,21.2790698 C6.66639898,21.2790698 2.44186047,17.0545313 2.44186047,11.8604651 C2.44186047,6.66639898 6.66639898,2.44186047 11.8604651,2.44186047 C17.0545312,2.44186047 21.2790698,6.66639898 21.2790698,11.8604651 C21.2790698,17.0545313 17.0544724,21.2790698 11.8604651,21.2790698 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

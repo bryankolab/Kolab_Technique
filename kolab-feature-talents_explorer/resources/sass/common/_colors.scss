@@ -1,0 +1,45 @@
+/**
+ *  -----------------------------------------------
+ *  COLORS
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Colors
+ -----------------------------------------------*/
+body {
+    .c {
+        &-black {
+            color: $black !important;
+        }
+        &-white {
+            color: $white !important;
+        }
+        //	&-grey { color: $grey !important; }
+        &-main-grey {
+            color: $main-grey !important;
+        }
+        &-grey-b {
+            color: $grey-b !important;
+        }
+    }
+}
+
+/*-----------------------------------------------
+ * Background Colors
+ -----------------------------------------------*/
+.bg {
+    &-black {
+        background-color: $black !important;
+    }
+    &-white {
+        background-color: $white !important;
+    }
+    &-grey-white {
+        background-color: $grey-white !important;
+    }
+}
+
+input::placeholder {
+    color: white !important;
+}

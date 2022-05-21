@@ -1,0 +1,61 @@
+/**
+ *  -----------------------------------------------
+ *  MENU
+ *  -----------------------------------------------
+ */
+
+.menu {
+    width: 55%;
+    margin: 0 auto;
+    @include m1380 {
+        max-width: 500px;
+    }
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: relative;
+    }
+    &__item {
+        display: inline-block;
+    }
+
+    &__link {
+        display: block;
+        @include color("main_text");
+
+        // active menu
+        &::after {
+            content: "";
+            display: block;
+            background-color: $violet-2;
+            width: 110px;
+            height: 4px;
+            border-radius: 3px;
+            margin: 2px auto 0 auto;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: all 0.3s ease;
+            position: relative;
+            bottom: -47px;
+            right: 18px;
+        }
+
+        &.is-active {
+            font-weight: 700;
+        }
+
+        &:hover,
+        &.is-active {
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+
+        &:hover::after {
+            background-color: $purple;
+        }
+    }
+}

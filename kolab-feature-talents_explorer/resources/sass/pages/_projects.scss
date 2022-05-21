@@ -1,0 +1,112 @@
+/**
+ *  -----------------------------------------------
+ *  PROJECTS
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * General
+ -----------------------------------------------*/
+.projects-wrapper .main-container {
+    overflow: hidden;
+}
+.projects {
+    &__view-container {
+        width: 100%;
+    }
+
+    &__view-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        transition: transform 0.8s ease;
+
+        .is-project-view & {
+            transform: translateX(calc(-100% - 20px));
+        }
+    }
+
+    &__view {
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    &__block {
+        padding: 0;
+        max-height: 1100px;
+        height: 70vh;
+        overflow: auto;
+        @include no-scrollbar();
+    }
+}
+
+/*-----------------------------------------------
+ * Table
+ -----------------------------------------------*/
+.projects-table {
+    $title-width: 120px;
+
+    .table-row {
+        align-items: flex-start;
+        padding: 16px 8px 0;
+    }
+
+    &__title-cell {
+        width: $title-width;
+        padding-top: 20px;
+        padding-right: 20px;
+        text-align: right;
+    }
+
+    &__content {
+        width: calc(100% - #{$title-width});
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    &__date {
+        @include color("light_text");
+        @include text-size(32);
+        font-weight: 700;
+    }
+}
+
+/*-----------------------------------------------
+ * Project
+ -----------------------------------------------*/
+.project {
+    &__category {
+        border-radius: 5px;
+        display: inline-block;
+        color: $white;
+        @include text-size(22);
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 5px 15px;
+        margin-left: 10px;
+        margin-bottom: 12px;
+
+        &.is-darkmagenta {
+            @include gradient(#e6448a, #86103e, 180deg);
+        }
+
+        &.is-orange {
+            @include gradient(#f9aa7c, #d2765e, 180deg);
+        }
+
+        &.is-purple {
+            @include gradient(#9000e4, #5700c4, 180deg);
+        }
+
+        &.is-darkblue {
+            @include gradient(#463cb6, #08033b, 180deg);
+        }
+
+        &.is-turquoise {
+            @include gradient(#57dace, #2390b9, 180deg);
+        }
+    }
+}

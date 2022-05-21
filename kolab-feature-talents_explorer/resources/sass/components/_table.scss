@@ -1,0 +1,174 @@
+/**
+ *  -----------------------------------------------
+ *  components/TABLE
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Table
+ -----------------------------------------------*/
+.table {
+    width: 100%;
+}
+
+.table-head {
+    @include border(bottom, 1px, "light-medium_bg");
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.table-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 20px;
+    width: 100%;
+    @include m1380 {
+        padding-left: 60px;
+        padding-right: 0;
+    }
+
+    &:nth-child(even) {
+        @include background-color("dark_bg3");
+    }
+}
+
+.table-data {
+    @include color("main_text");
+    width: 100%;
+    max-width: 15%;
+    @include text-size(30);
+    padding: 15px;
+    position: relative;
+
+    &.table-col-wide {
+        max-width: 25%;
+    }
+    &.table-col-medium {
+        max-width: 20%;
+    }
+    &.table-col-small {
+        max-width: 10%;
+    }
+
+    &.col-actions {
+        max-width: 70px;
+        position: relative;
+        z-index: 50;
+    }
+
+    .table-head & {
+        font-weight: 700;
+        letter-spacing: 0.11rem;
+    }
+
+    .icons {
+        display: inline-block;
+        font-size: 2.2rem;
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+
+        &:hover {
+            color: $purple;
+        }
+    }
+
+    a {
+        transition: color 0.3s ease;
+        &:hover {
+            color: $purple;
+        }
+    }
+
+    p {
+        @include m1380 {
+            font-size: 14px;
+        }
+    }
+
+    // Skills list
+    &__list {
+        @include border(all, 1px, "light-medium_bg");
+        @include background-color("light_bg");
+        border-radius: 6px;
+        padding: 8px 12px 5px;
+        width: 100%;
+        max-width: 250px;
+        position: relative;
+
+        // Icon
+        &::before {
+            content: "";
+            display: inline-block;
+            vertical-align: top;
+            width: 15px;
+            height: 15px;
+            @extend .picto-skills;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            margin-right: 10px;
+        }
+
+        // Arrow
+        .icon {
+            font-size: 10px;
+            color: $grey;
+            position: absolute;
+            top: 12px;
+            right: 5px;
+            pointer-events: none;
+            transition: transform 0.3s ease;
+
+            .is-active & {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    &__list-inner {
+        display: inline-block;
+        vertical-align: top;
+        transform: translateY(-1px);
+        max-height: 20px;
+        width: calc(100% - 30px);
+        overflow: hidden;
+        @include m1380 {
+            font-size: 14px;
+        }
+    }
+
+    &__list-item {
+        display: block;
+
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__list-all-items {
+        display: none;
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 0;
+        right: 0;
+        @include border(all, 1px, "border");
+        @include background-color("light_bg");
+        border-radius: 6px;
+        @include shadow();
+        padding: 12px 10px;
+        z-index: 2;
+        @include m1380 {
+            font-size: 14px;
+        }
+
+        .table-data__list-item {
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+}

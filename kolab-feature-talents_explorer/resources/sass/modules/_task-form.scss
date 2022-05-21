@@ -1,0 +1,51 @@
+/**
+ *  -----------------------------------------------
+ *  components/TASK FORM
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Task Form (Popup)
+ -----------------------------------------------*/
+
+.form__task {
+	position: relative;
+	@media (max-width: 1580px) {
+		margin-top: 60px;
+	}
+
+	.popup-box {
+		width: 680px;
+		padding: 35px 40px;
+
+		@media (max-width: 1580px) {
+			padding: 20px;
+		}
+		
+		&:not(.pre-task-form) {
+			min-height: 500px;
+		}
+	}
+
+	.theme-dark & {
+		input.vc-bg-white {
+			background-color: transparent;
+		}
+	}
+}
+
+
+
+/*-----------------------------------------------
+ * Task Form - Select Project
+ -----------------------------------------------*/
+.pre-task-form {
+	.select2-container {
+		margin-bottom: 0;
+	}
+
+	&__button {
+		min-width: 130px;
+		margin-left: 20px;
+	}
+}

@@ -1,0 +1,68 @@
+/**
+ *  -----------------------------------------------
+ *  modules/ACCOUNT MENU
+ *  -----------------------------------------------
+ */
+
+.account {
+    &__header {
+        //position: absolute;
+        //top: 40px;
+        //right: 90px;
+        @include media-breakpoint-down(lg) {
+            right: 40px;
+        }
+    }
+}
+
+/*-----------------------------------------------
+ * Account menu
+ -----------------------------------------------*/
+.account-menu {
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__info {
+        margin-left: 10px;
+    }
+
+    &__panel {
+        position: absolute;
+        top: calc(100% + 5px);
+        max-width: 220px;
+        min-width: 200px;
+        width: 100%;
+        @include shadow();
+        border-radius: 6px;
+        @include background-color("light_bg");
+        padding: 20px 0;
+        z-index: 10;
+
+        &.js-toggle-content {
+            display: none;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        color: $white;
+        @include text-size(32);
+        padding: 8px 20px;
+        width: 100%;
+        transition: color 0.3s, background-color 0.3s ease;
+
+        &:hover {
+            background-color: #f2f4f7;
+            color: $black;
+            @include color("main_text");
+
+            .theme-dark & {
+                background-color: $black3;
+            }
+        }
+    }
+}

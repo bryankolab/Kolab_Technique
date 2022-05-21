@@ -1,0 +1,73 @@
+.module__explorer_project_detail {
+    z-index: 9999;
+    min-width: 1100px;
+    max-width: 75%;
+    height: 100%;
+    margin: 0px auto;
+    padding: 50px 30px;
+    border-radius: 2px;
+    background-color: #100824;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+    transition: all 0.3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+
+    max-height: 100vh;
+    overflow: auto;
+
+
+    h1 {
+        background-image: linear-gradient(to right, #eb725d -7%, #db57ad 110%), linear-gradient(to bottom, #fff, #fff);
+        font-size: 35px;
+        font-weight: bold;
+        color: #fff;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .project-date {
+        font-size: 15px;
+        color: #fff;
+        margin: 20px 0 15px 0;
+    }
+
+    p {
+        font-size: 15px;
+        color: #888;
+        width: 80%;
+        margin: 15px auto 30px auto;    }
+
+    .project-main-media-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 35px;
+
+        .media-selector {
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .project-main-media {
+            margin: 0 50px;
+            width: 90%;
+            height: fit-content;
+        }
+    }
+
+    .project-carousel-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 150px;
+
+        .project-carousel-item {
+            max-width: 150px;
+            margin: 10px;
+        }
+    }
+}
+
+.body-modal {
+    overflow: hidden;
+    height: 100%;
+}

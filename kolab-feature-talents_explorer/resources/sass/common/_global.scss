@@ -1,0 +1,533 @@
+/**
+ *  -----------------------------------------------
+ *  GLOBAL
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * 1. Wrappers
+ -----------------------------------------------*/
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $proxima;
+    font-size: 1.6rem;
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+
+    @include this-background-color("dark_bg");
+
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
+}
+.date-picker {
+    position: relative;
+    display: flex;
+    background: rgb(72, 54, 124);
+    border-radius: 5px;
+}
+.row-card {
+    display: block;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    height: 352px;
+    overflow: scroll;
+    border-top: 1px solid #48367c;
+}
+.rdv-marg {
+    margin-top: 13px;
+    width: 78%;
+}
+
+.rdv-car_inf {
+    // justify-content: space-between;
+    display: flex;
+    height: 100%;
+    min-height: 143px;
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-content: space-between;
+}
+.date-picker_model {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    // justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(118, 101, 167);
+    min-height: 45px;
+    margin-left: 30px;
+}
+.poopover {
+    position: absolute;
+    width: 19px;
+    height: 15px;
+    top: -8px;
+    right: 0;
+    background: #7665a7;
+    border-radius: 3px;
+    text-align: center;
+    color: #2b1c56;
+    font-size: 9px;
+    line-height: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.c-1 {
+    background: #38276a;
+    position: relative;
+    text-align: center !important;
+    width: 132px;
+    align-items: center;
+    border-radius: 50px;
+    padding: 4px;
+    margin-right: 10px;
+    justify-content: space-between;
+    color: white;
+    transition: background-color 0.5s;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+.block-g {
+    background: #2b1c56 !important;
+}
+.poopover-h {
+    position: relative;
+    text-align: center !important;
+    background: #150c2d;
+    width: 132px;
+    align-items: center;
+    border-radius: 50px;
+    padding: 4px;
+    margin-right: 10px;
+    justify-content: space-between;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+.test {
+    background: rgb(72, 54, 124);
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 14px;
+    flex: 1;
+    transition: flex 0.4s;
+}
+.rdv__contact a:hover,
+.rdv__contact a:focus {
+    flex: 5;
+}
+
+.c-1:hover {
+    background: #150c2d;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    // transform: scale(1.2);
+    // transition: all 0.2s ease-in-out;
+}
+.c-1:active {
+    background: #150c2d;
+}
+.c-1:focus {
+    background: #150c2d;
+}
+.dot-button-task {
+    background-color: #7665a7;
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.breaking-word {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.appointment-filters_notes {
+    display: flex;
+    background: #1e1438;
+    width: 49%;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    margin-left: 19px;
+    margin-top: 10px;
+    padding-left: 24px;
+    font-weight: bold;
+}
+.content {
+    padding: 1rem;
+    text-align: center;
+    color: #7665a7;
+    font-family: "Proxima Nova", "Courier New", Courier, monospace;
+}
+.main-appointment {
+    display: flex;
+    background: #1e1438;
+    width: 168px;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 8px;
+    justify-content: space-between;
+    color: white;
+    margin-top: 10px;
+    padding-left: 24px;
+    font-weight: bold;
+}
+.new-box {
+    padding: 0px 27px 0px;
+    margin-bottom: 10px !important;
+}
+.new-box-2 {
+    padding: 0px 27px 0px;
+}
+.img-task-dash {
+    border-radius: 500%;
+    margin-right: 10px;
+    height: 25px;
+}
+.dash-note {
+    margin-bottom: 57px;
+    width: 84% !important;
+}
+.dash-car_padding {
+    margin-bottom: 40px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/*-----------------------------------------------
+ * 2. Custom resets
+ -----------------------------------------------*/
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    outline: none;
+}
+
+a {
+    color: inherit;
+
+    &,
+    &:hover,
+    &:focus {
+        outline: none;
+        text-decoration: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+input,
+textarea,
+select,
+button {
+    &:focus {
+        outline: none;
+    }
+}
+
+// Remove Safari shadow
+input,
+textarea {
+    border-radius: 0; // Reset default styles in iOs
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.icon-center {
+    margin-right: 0px;
+    display: flex;
+    justify-content: center;
+}
+.appointment-edit {
+    box-shadow: rgb(10 31 68 / 8%) 0px 0px 1px 0px,
+        rgb(13 11 14 / 10%) 0px 1.5px 2px 0px !important;
+    padding: 10px 8px !important;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    background: #190f33;
+}
+.wrapper-js_query {
+    flex: none;
+    transition: flex 1s ease;
+    display: flex;
+    position: relative;
+    background: rgb(72, 54, 124);
+}
+.wrapper-js_query .move {
+    flex: auto;
+}
+.appointment-notes_show {
+    margin-bottom: 0px;
+    margin-top: 30px;
+    padding: 39px 17px !important;
+}
+.appointment-nav {
+    text-align: center;
+    display: inline-grid;
+    justify-content: center;
+    align-content: space-around;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    border-right: 1px solid black !important;
+    height: 100%;
+}
+
+button {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1.14;
+    outline: 0;
+    padding: 0;
+    text-align: left;
+}
+/*-----------------------------------------------
+ * New button Dashboard
+ -----------------------------------------------*/
+
+button:hover .on {
+    background: #150c2d;
+}
+button:focus .on {
+    background: #150c2d;
+}
+
+strong {
+    font-weight: 700;
+}
+
+p {
+    @extend .text;
+}
+
+::-ms-clear {
+    display: none;
+} // Prevents "x" to clear field in explorer 11+
+
+.no-padding {
+    padding: 0;
+}
+
+.no-touchevents .tel {
+    pointer-events: none;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.js-header,
+.js-dashboard-inner {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    .is-ready & {
+        opacity: 1;
+    }
+}
+
+/*-----------------------------------------------
+ * 3. Custom Container
+ -----------------------------------------------*/
+.main-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+
+    @include media-breakpoint-up(sm) {
+        max-width: 540px;
+    }
+
+    @include media-breakpoint-up(md) {
+        max-width: 720px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        max-width: 960px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        max-width: 1140px;
+    }
+
+    @media (min-width: $screen-xl) {
+        max-width: 79.9vw;
+    }
+}
+
+.main-container-wrapper {
+    @include background-color("dark_bg");
+    padding: 0 30px 30px;
+
+    .main-container {
+        @include background-color("medium_bg");
+        border-radius: 6px;
+        box-shadow: 0 0 1.2px 0 rgba(10, 31, 68, 0.08),
+            0px 5px 9px 0 rgba(10, 31, 68, 0.05);
+        padding: 20px;
+        // margin-top: 30px;
+        margin-bottom: 30px;
+
+        @media (min-width: $screen-xl) {
+            // padding-top: 50px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            width: 90%;
+            max-width: 1800px;
+            // max-width: 90%;
+        }
+    }
+}
+
+.actions-list {
+    // transform: translate(-45px, -30px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__buttons {
+        display: inline-grid;
+        //transition: opacity 0.5s, visibility 0.5s ease;
+
+        &.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &-over {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: -5px;
+        width: calc(100% - 105px);
+        background-color: #f8f8f8;
+        transform-origin: right;
+        transition: transform 1s, opacity 0.5s, visibility 0.5s ease;
+
+        &.is-hidden {
+            // transform: scaleX(0);
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}
+
+// .scroll-content {
+//   @include scrollbar();
+// }
+
+/*-----------------------------------------------
+ * 4. Animations
+ -----------------------------------------------*/
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.js-to-fadein {
+    opacity: 0;
+}
+
+.is-fadein {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.fadein {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.fadeout {
+    opacity: 0 !important;
+}
+
+.block {
+    @include background-color("headertop");
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    // padding: 30px;
+    @include light-theme-shadow();
+    position: relative;
+
+    &.has-bg {
+        padding: 0;
+    }
+
+    &__col {
+        margin-bottom: 30px;
+
+        .block {
+            margin-bottom: 0;
+            height: 100%;
+        }
+    }
+
+    &__inner {
+        padding: 30px;
+    }
+
+    &__bck-image {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+}

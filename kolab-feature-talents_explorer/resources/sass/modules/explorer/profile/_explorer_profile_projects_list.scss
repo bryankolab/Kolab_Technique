@@ -1,0 +1,42 @@
+.explorer-profile-projects-list {
+    .project {
+        height: 290px;
+        width: 100%;
+        position: relative;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+        background-color: #1b1137;
+        span {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: white;
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+        }
+    }
+
+    .project-empty {
+        height: 290px;
+        width: 100%;
+        position: relative;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+        border-style: dashed;
+        border-width: 1px;
+        border-color: #eb725d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: white;
+        }
+    }
+}

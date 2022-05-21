@@ -1,0 +1,41 @@
+/**
+ *  -----------------------------------------------
+ *  HEADER
+ *  -----------------------------------------------
+ */
+
+.header {
+    padding: 40px 90px;
+    position: relative;
+    margin-bottom: 50px;
+    background-color: #0e0623;
+    @include m1380 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .logo-wrapper {
+        position: absolute;
+        left: 90px;
+        @include media-breakpoint-down(lg) {
+            left: 30px;
+        }
+    }
+
+    .main-container {
+        position: relative;
+    }
+}
+
+.logout-link {
+    transition: color 0.5s ease;
+
+    &:hover {
+        color: $grey;
+    }
+
+    @media screen and (min-width: 2501px) {
+        right: auto;
+        left: calc(50% + 600px + 320px);
+    }
+}

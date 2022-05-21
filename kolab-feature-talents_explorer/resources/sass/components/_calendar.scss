@@ -1,0 +1,144 @@
+/**
+ *  -----------------------------------------------
+ *  components/Calendar
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Calendar
+ -----------------------------------------------*/
+
+// General
+.vc-popover-content {
+	border: 0 !important;
+	@include sm-shadow();
+
+	&-wrapper {
+		// width: calc(100% - 30px);
+		// max-width: 310px;
+		top: 10px !important;
+		left: -10px !important;
+
+		&[x-placement="bottom-end"] {
+			left: 10px !important;
+		}
+
+		[popover-align="right"] & {
+			left: auto !important;
+			right: 40px;
+		}
+
+		.form-field-wrapper & {
+			left: 0 !important;
+		}
+
+		.filter-item & {
+			width: 100%;
+			max-width: none;
+			// top: -5px !important;
+			left: 0 !important;
+		}
+
+		.w-100 & {
+			width: 100%;
+		}
+	}
+
+	.vc-container {
+		font-family: $proxima;
+		min-width: 100%;
+	}
+
+	.vc-header {
+		margin-bottom: 5px;
+	}
+
+	.vc-title {
+		@include text-size(32);
+		@include color('main_text');
+	}
+
+	.vc-grid-cell {
+		margin-bottom: 5px;
+	}
+
+	.vc-weekday {
+		color: $main-grey;
+		@include text-size(28);
+		font-weight: 400;
+		// border-top: 1px solid $grey-white;
+		// border-bottom: 1px solid $grey-white;
+		@include border(top, 1px, 'medium_bg_2');
+		@include border(bottom, 1px, 'medium_bg_2');
+		margin-bottom: 5px;
+	}
+	
+	.vc-day-content:hover {
+		@include background-color('hover_2');
+	}
+
+	// Arrow
+	.vc-popover-caret {
+		border-top: 1px solid #f2f2f3 !important;
+	  border-left: 1px solid #f2f2f3 !important;
+
+	  .theme-dark & {
+	  	border-top: 1px solid $black3 !important;
+	  	border-left: 1px solid $black3 !important;
+	  }
+	}
+}
+
+// Colors
+.vc-bg-kpurple-200 {
+	background-color: #F4F4F4;
+	
+	.theme-dark & {
+		background-color: $darkgrey;
+	}
+}
+.vc-bg-kpurple-600 {
+	background-color: $purple-1;
+}
+.vc-border-kpurple-700.vc-rounded-full {
+	border-color: transparent;
+	@include background-color('hover_2');
+}
+
+.theme-dark {
+	.vc-bg-white {
+		background-color: $black3;
+	}
+	input.vc-bg-white {
+		background-color: transparent;
+	}
+	.vc-text-gray-900 {
+		color: $white;
+	}
+	.vc-text-gray-600 {
+		color: $white;
+	}
+	.hover\:vc-bg-gray-300:hover {
+		background-color: $darkgrey2 !important;
+	}
+}
+
+
+
+// Current day
+.is-today .vc-day-content {
+	position: relative;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
+		background-color: $purple-1;
+		position: absolute;
+		bottom: -2px;
+		left: 50%;
+		transform: translate(-50%, 100%);
+	}
+}
