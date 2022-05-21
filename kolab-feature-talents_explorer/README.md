@@ -4,6 +4,8 @@
 
 -Cloner le projet à l'aide des commandes git.
 
+-Créer une nouvelle branche en respectant la nomenclature feature/...(Nom_de_la_feature_créer)
+
 -Créer le .env avec vos accès de connexion en base de donnée.
 
 -Installer composer : https://getcomposer.org/download/ , exécuter les commandes donner sur cette page
