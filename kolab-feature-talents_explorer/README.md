@@ -14,7 +14,7 @@ Une fois le projet installer, c'est à toi de coder.
 
 ## Exercices à réaliser 
 
-![alt text](Kolab.png)Kolab.png
+![alt text](Kolab.png)
 
 
 Dans un premier temps, créer deux utilisateurs sur kolab 
