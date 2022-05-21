@@ -25,7 +25,7 @@ Une fois l'accès à Explorer effectuer, se rendre sur l'endpoint /explorer/mess
 
 Faire en sorte que dès la reception d'un nouveau message la conversation viennent à l'élément envoyé le plus récemment et empêcher le scroll de la page lors du défilement dans la conversation.
 
-_Bonus_:
+__Bonus__:
 N'hésite pas à créer des animations sur cette messagerie fais preuve de créativité ;)
 
 
